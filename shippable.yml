@@ -32,7 +32,7 @@ build:
     - cat shippable/codecoverage/cobertura-coverage.xml
     - export XUNIT_FILE=shippable/testresults/result.xml
     - grunt
-    - cat shippable/codecoverage/cobertura-coverage.xml
+    - cat shippable/codecoverage/coberturatest-coverage.xml
 
 
   post_ci:
