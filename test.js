@@ -16,7 +16,7 @@ describe("Index", function () {
   });
   
   it("run fake test", function() {
-    assert.ok(1 == 1);
+    assert.ok(1 == 2);
   });
   
 });
