@@ -37,12 +37,12 @@ build:
 
   post_ci:
     - docker build -t=shippabledocker/shiphitchcock2_sample_node .
-    - docker push shippabledocker/shiphitchcock2_sample_node
+    # - docker push shippabledocker/shiphitchcock2_sample_node
     
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
+  # hub:
+  #   - integrationName: ship-docker
+  #     type: docker
       
   notifications:
     - integrationName: email
@@ -52,32 +52,32 @@ integrations:
         # - shiphitchcock2@gmail.com
         # - vidya@shippable.com
       
-      on_pull_request: always
-      on_start: always
-      on_success: always
-      on_failure: always
+    #   on_pull_request: always
+    #   on_start: always
+    #   on_success: always
+    #   on_failure: always
 
-    - integrationName: ship-slack
-      type: slack
-      recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
+    # - integrationName: ship-slack
+    #   type: slack
+    #   recipients: 
+    #     - "#hitchcock1-public"
+    #     - pvt-channel
       
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
+    #   on_start: always
+    #   on_pull_request: always
+    #   on_success: always
+    #   on_failure: always
  
-    - integrationName: irc
-      type: irc
-      recipients: 
-        - "chat.freenode.net#test-cock"
-        - "chat.freenode.net#hitchcok2-irc"
+    # - integrationName: irc
+    #   type: irc
+    #   recipients: 
+    #     - "chat.freenode.net#test-cock"
+    #     - "chat.freenode.net#hitchcok2-irc"
       
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
+    #   on_start: always
+    #   on_pull_request: always
+    #   on_success: always
+    #   on_failure: always
   
  
       
