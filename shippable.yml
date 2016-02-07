@@ -48,8 +48,9 @@ integrations:
     - integrationName: email
       type: email
       recipients: 
-        - shiphitchcock2@gmail.com
-        - vidya@shippable.com
+        - vishnu@shippable.com
+        # - shiphitchcock2@gmail.com
+        # - vidya@shippable.com
       
       on_pull_request: always
       on_start: always
