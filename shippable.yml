@@ -33,52 +33,35 @@ build:
 
 
   post_ci:
-    - docker build -t=shippabledocker/shiphitchcock2_sample_node .
-    - docker push shippabledocker/shiphitchcock2_sample_node
+      - echo "end"
+    # - docker build -t=shippabledocker/shiphitchcock2_sample_node .
+    # - docker push shippabledocker/shiphitchcock2_sample_node
     
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-      branches:
-        only:
-          - master
-          - test-reports
+  # hub:
+  #   - integrationName: ship-docker
+  #     type: docker
+  #     branches:
+  #       only:
+  #         - master
+  #         - test-reports
   notifications:
     - integrationName: email
       type: email
       recipients: 
-        - shiphitchcock2@gmail.com
-        - vidya@shippable.com
+        - vishnu@shippable.com
       
       on_pull_request: always
       on_start: always
       on_success: always
       on_failure: always
 
-    - integrationName: ship-slack
+    - integrationName: scriptnull-test
       type: slack
       recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
+        - "#scriptnull-test"
       
       on_start: always
       on_pull_request: always
       on_success: always
       on_failure: always
- 
-    - integrationName: irc
-      type: irc
-      recipients: 
-        - "chat.freenode.net#test-cock"
-        - "chat.freenode.net#hitchcok2-irc"
-      
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
-  
- 
-      
-          
-  
